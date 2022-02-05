@@ -1,6 +1,7 @@
 /* color 
 #2392D1 kindOfBlue
 #E1E7EF lightgray
+#EFB237 yellow
 */
 
 /* font
@@ -42,9 +43,6 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.search-icon {
 }
 
 .searchbar {
@@ -146,4 +144,47 @@ main {
   background-color: #e1e7ef;
   grid-column: 3 / span 9;
   grid-row: 2 / span 5;
+  /* grid container */
+  display: grid;
+  grid-template-columns: 8fr 3fr;
+  grid-template-rows: auto;
+}
+
+main h4 {
+  padding: 25px 16px 16px 16px;
+}
+
+.your-projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-cards {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 32px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+.rightside {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr;
+}
+
+.card {
+  background-color: #fff;
+}
+
+.top-container,
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-container .card {
+  background-color: #fff;
 }
