@@ -2,6 +2,7 @@
 #2392D1 kindOfBlue
 #E1E7EF lightgray
 #EFB237 yellow
+#8E8E8E gray font
 */
 
 /* font
@@ -147,26 +148,52 @@ main {
   /* grid container */
   display: grid;
   grid-template-columns: 8fr 3fr;
-  grid-template-rows: auto;
-}
-
-main h4 {
-  padding: 25px 16px 16px 16px;
+  grid-template-rows: 1fr;
 }
 
 .your-projects {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+main h4 {
+  padding: 25px 16px 10px 16px;
 }
 
 .project-cards {
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
   gap: 32px;
   padding-left: 16px;
   padding-bottom: 16px;
+}
+
+.project-cards .card {
+  padding: 32px;
+  padding-bottom: 24px;
+  border-left: 7px solid #efb237;
+}
+
+.project-cards h5 {
+  margin-bottom: 4px;
+}
+
+.project-cards .card p {
+  font-size: 16px;
+  color: #8e8e8e;
+  /* Ellipsis for Multiline Text */
+  display: -webkit-box;
+  /* max-width: 200px; */
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.actions {
+  margin-top: 32px;
+  text-align: right;
+  letter-spacing: 16px;
 }
 
 .rightside {
@@ -175,8 +202,18 @@ main h4 {
   grid-template-rows: 1fr 1fr;
 }
 
-.card {
-  background-color: #fff;
+.rightside p {
+  font-size: 12px;
+  color: #8e8e8e;
+  padding-bottom: 16px;
+}
+
+.rightside h6 {
+  margin-bottom: 3px;
+}
+
+main .card {
+  background-color: rgb(255, 255, 255);
 }
 
 .top-container,
@@ -185,6 +222,34 @@ main h4 {
   flex-direction: column;
 }
 
-.top-container .card {
-  background-color: #fff;
+.top-container .card-container {
+  background-color: rgb(255, 255, 255);
+  /* height: auto; */
+  margin: 0 16px 16px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+  padding: 32px;
+}
+
+.card-container .card:not(:last-child) {
+  border-bottom: 1px solid #e1e7ef;
+}
+
+.bottom-container .people {
+  background-color: rgb(255, 255, 255);
+  /* height: 100%; */
+  margin: 0 16px;
+  padding: 32px;
+}
+
+.card,
+.card-container,
+.people {
+  border-radius: 7px;
+}
+
+.people img {
+  float: left;
 }
