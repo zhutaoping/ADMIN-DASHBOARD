@@ -149,15 +149,23 @@ main {
   display: grid;
   grid-template-columns: 8fr 3fr;
   grid-template-rows: 1fr;
+  /* border: 2px solid red; */
 }
 
+/* bug1 */
 .your-projects {
-  /* display: flex; */
-  /* flex-direction: column; */
+  /* border: 2px solid red; */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 main h4 {
-  padding: 25px 16px 10px 16px;
+  margin-top: 16px;
+  margin-left: 16px;
 }
 
 .project-cards {
@@ -196,13 +204,15 @@ main h4 {
   letter-spacing: 16px;
 }
 
+/* bug2 */
 .rightside {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 1fr 1fr;
+  /* border: 2px solid red; */
 }
 
-.rightside p {
+.card-container p {
   font-size: 12px;
   color: #8e8e8e;
   padding-bottom: 16px;
@@ -216,10 +226,10 @@ main .card {
   background-color: rgb(255, 255, 255);
 }
 
-.top-container,
-.bottom-container {
+.top-container {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .top-container .card-container {
@@ -229,7 +239,6 @@ main .card {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  gap: 16px;
   padding: 32px;
 }
 
@@ -237,11 +246,15 @@ main .card {
   border-bottom: 1px solid #e1e7ef;
 }
 
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .bottom-container .people {
   background-color: rgb(255, 255, 255);
-  /* height: 100%; */
   margin: 0 16px;
-  padding: 32px;
 }
 
 .card,
@@ -250,6 +263,26 @@ main .card {
   border-radius: 7px;
 }
 
+.people {
+  padding-left: 32px;
+  padding-top: 16px;
+}
+
 .people img {
   float: left;
+  margin-right: 16px;
+}
+
+.people .lines {
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  color: #8e8e8e;
+  padding-bottom: 16px;
+}
+
+.people .tag {
+  font-size: 12px;
+  font-weight: 300;
+  color: black;
 }
