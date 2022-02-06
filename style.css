@@ -273,7 +273,12 @@ main .card,
 
 .people {
   padding-left: 32px;
-  padding-top: 16px;
+  padding-top: 24px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  margin-bottom: 0;
 }
 
 .people img {
