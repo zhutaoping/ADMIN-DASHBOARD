@@ -181,6 +181,7 @@ main h4 {
   padding: 32px;
   padding-bottom: 24px;
   border-left: 7px solid #efb237;
+  /* box-shadow: 0px 4px 5px rgb(0, 0, 0, 0.2); */
 }
 
 .project-cards h5 {
@@ -207,12 +208,12 @@ main h4 {
 /* bug2 */
 .rightside {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   /* border: 2px solid red; */
 }
 
-.card-container p {
+.bulletin-board p {
   font-size: 12px;
   color: #8e8e8e;
   padding-bottom: 16px;
@@ -222,7 +223,8 @@ main h4 {
   margin-bottom: 3px;
 }
 
-main .card {
+main .card,
+.bulletin-board .bulletin {
   background-color: rgb(255, 255, 255);
 }
 
@@ -232,18 +234,22 @@ main .card {
   gap: 16px;
 }
 
-.top-container .card-container {
+.top-container .bulletin-board {
   background-color: rgb(255, 255, 255);
   /* height: auto; */
-  margin: 0 16px 16px 16px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  margin: 0 16px;
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: repeat(3, 1fr); */
   padding: 32px;
 }
 
-.card-container .card:not(:last-child) {
+.bulletin-board .bulletin:not(:last-child) {
   border-bottom: 1px solid #e1e7ef;
+}
+
+.bulletin {
+  margin-bottom: 16px;
 }
 
 .bottom-container {
@@ -255,12 +261,14 @@ main .card {
 .bottom-container .people {
   background-color: rgb(255, 255, 255);
   margin: 0 16px;
+  /* box-shadow: 0px 4px 5px rgb(0, 0, 0, 0.2); */
 }
 
 .card,
-.card-container,
+.bulletin-board,
 .people {
   border-radius: 7px;
+  box-shadow: 0px 4px 5px rgb(0, 0, 0, 0.2);
 }
 
 .people {
