@@ -152,10 +152,10 @@ main {
   /* border: 2px solid red; */
 }
 
-/* bug1 */
-.your-projects {
-  /* border: 2px solid red; */
-}
+/* bug1 
+.your-projects { 
+  border: 2px solid red;
+} */
 
 .flex-container {
   display: flex;
